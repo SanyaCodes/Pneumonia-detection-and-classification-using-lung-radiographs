@@ -48,7 +48,7 @@ Upon balancing this data set using Image Augmentation technique, the dataset bec
 <img src="https://github.com/Ssanyachetwani/Pneumonia-detection-and-classification-using-lung-radiographs/blob/main/rim/rim2.png?raw=true" alt="datab" width=500/>
 
 ### 2. Masking :
-When processing images, the term 'masking' refers to the practice of using a mask to protect a specific area of an image, just as we would use masking tape when painting the house. Masking an area of an image protects that area and deletes rest of the image, allowing the machine to focus on a single zone, rather than spreading attention to areas which are not of any use. 
+When processing images, the term 'masking' refers to the practice of using a mask to protect a specific area of an image, just as we would use masking tape when painting the house. Masking an area of an image protects that area and deletes res
 
 Here I used UNet :
 
