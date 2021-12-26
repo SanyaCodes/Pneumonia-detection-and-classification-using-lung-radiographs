@@ -90,3 +90,23 @@ Ensembling methods:
 
 ## Results :
 
+Superpixel + DeOldify
+| Class | Typical  | Indeterminate  | Atypical  |
+| ------- | --- | --- | --- |
+| Precision | 0.75 | 0.95 | 0.94 |
+| Recall | 0.63 | 0.86 | 0.76 |
+| maP | 0.67 | 0.73 | 0.73 |
+
+Superpixel
+| Class | Typical  | Indeterminate  | Atypical  |
+| ------- | --- | --- | --- |
+| Precision | 0.52 | 0.8 | 0.83 |
+| Recall | 0.56 | 0.62 | 0.63 |
+| maP | 0.3 | 0.61 | 0.65 |
+
+DeOldify
+| Class | Typical  | Indeterminate  | Atypical  |
+| ------- | --- | --- | --- |
+| Precision | 0.49 | 0.76 | 0.71 |
+| Recall | 0.48 | 0.55 | 0.52 |
+| maP | 0.28 | 0.61 | 0.6 |
