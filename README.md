@@ -56,7 +56,7 @@ Here I used UNet :
 
 The main aim of this step is to convert the B&W radiographs to color. This step is helpful in detecting pneumonia since the areas of the lungs affected are highlighted. It can be visually seen that it is easier to detect pneumonia in the colored images.
 
-<img src="https://github.com/Ssanyachetwani/Pneumonia-detection-and-classification-using-lung-radiographs/blob/main/rim/original.png?raw=true" alt="datab" width=300/>                   <img src="https://github.com/Ssanyachetwani/Pneumonia-detection-and-classification-using-lung-radiographs/blob/main/rim/deoldify.png?raw=true" alt="datab" width=300/>
+<img src="https://github.com/Ssanyachetwani/Pneumonia-detection-and-classification-using-lung-radiographs/blob/main/rim/original.png?raw=true" alt="datab" height=300/>                   <img src="https://github.com/Ssanyachetwani/Pneumonia-detection-and-classification-using-lung-radiographs/blob/main/rim/deoldify.png?raw=true" alt="datab" height=300/>
 
 We make use of an open source library DeOldify to colorize the grayscale radiographs - https://github.com/jantic/DeOldify.
 
