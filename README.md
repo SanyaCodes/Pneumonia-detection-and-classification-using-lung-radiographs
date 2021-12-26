@@ -36,7 +36,7 @@ Initial distribution :
 <li> Atypical Appearance          483 </li>
 <li> Name: target, dtype: int64 </li>
 
-<img src="https://github.com/Ssanyachetwani/Pneumonia-detection-and-classification-using-lung-radiographs/blob/main/rim/rim1.png?raw=true" alt="dataub" width=500/>
+<img src="https://github.com/Ssanyachetwani/Pneumonia-detection-and-classification-using-lung-radiographs/blob/main/rim/rim1.png?raw=true" alt="dataub" width=350/>
 
 Upon balancing this data set using Image Augmentation technique, the dataset becomes equally distributed across all 4 classes :
 <li> Typical Appearance          3007 </li>
@@ -45,20 +45,20 @@ Upon balancing this data set using Image Augmentation technique, the dataset bec
 <li> Atypical Appearance         2415 </li>
 <li> Name: target, dtype: int64 </li>
 
-<img src="https://github.com/Ssanyachetwani/Pneumonia-detection-and-classification-using-lung-radiographs/blob/main/rim/rim2.png?raw=true" alt="datab" width=500/>
+<img src="https://github.com/Ssanyachetwani/Pneumonia-detection-and-classification-using-lung-radiographs/blob/main/rim/rim2.png?raw=true" alt="datab" width=350/>
 
 ### 2. Masking :
 When processing images, the term 'masking' refers to the practice of using a mask to protect a specific area of an image, just as we would use masking tape when painting the house. Masking an area of an image protects that area and deletes rest of the image, allowing the machine to focus on a single zone, rather than spreading attention to areas which are not of any use. 
 
-Here I used UNet :
+Here I used UNet, the masked images obtained were of this kind :
 
-<img src="https://github.com/Ssanyachetwani/Pneumonia-detection-and-classification-using-lung-radiographs/blob/main/rim/masking.png?raw=true" alt="dataub" width=500/>
+<img src="https://github.com/Ssanyachetwani/Pneumonia-detection-and-classification-using-lung-radiographs/blob/main/rim/masking.png?raw=true" alt="dataub" width=250/>
 
 ### 3. Decolorizer :
 
 The main aim of this step is to convert the B&W radiographs to color. This step is helpful in detecting pneumonia since the areas of the lungs affected are highlighted. It can be visually seen that it is easier to detect pneumonia in the colored images.
 
-<img src="https://github.com/Ssanyachetwani/Pneumonia-detection-and-classification-using-lung-radiographs/blob/main/rim/original.png?raw=true" alt="datab" height=300/>                   <img src="https://github.com/Ssanyachetwani/Pneumonia-detection-and-classification-using-lung-radiographs/blob/main/rim/deoldify.png?raw=true" alt="datab" height=300/>
+<img src="https://github.com/Ssanyachetwani/Pneumonia-detection-and-classification-using-lung-radiographs/blob/main/rim/original.png?raw=true" alt="datab" height=250/>                   <img src="https://github.com/Ssanyachetwani/Pneumonia-detection-and-classification-using-lung-radiographs/blob/main/rim/deoldify.png?raw=true" alt="datab" height=250/>
 
 We make use of an open source library DeOldify to colorize the grayscale radiographs - https://github.com/jantic/DeOldify.
 
@@ -69,26 +69,24 @@ Superpixels have the following advantages:
 <li> They provide a convenient and compact representation of images that can be very useful for computationally demanding problems </li>
 <li> Superpixels have a perceptual meaning since pixels belonging to a given superpixel share similar visual properties</li>
 
-<img src="https://github.com/Ssanyachetwani/Pneumonia-detection-and-classification-using-lung-radiographs/blob/main/rim/superpixel.png?raw=true" alt="datab" width=300/> 
+<img src="https://github.com/Ssanyachetwani/Pneumonia-detection-and-classification-using-lung-radiographs/blob/main/rim/superpixel.png?raw=true" alt="datab" width=350/> 
 
 ### 5. YOLOv5 Ensemble:
 I made use of YoloV5 for detection of typical, indeterminate and atypical classes of pneumonia. Seperate models were trained for each class. YoloV5 can be used for multiclass detection, however it was observed that the accuracy suffered. The models performed significantly better when they were trained to detect every class individually. I created a set of 3 models for every class respectively. I make use of One Vs Rest (OVR) ensembling technique which combines the decision from several models to improve the overall performance.  
-<img src="https://github.com/Ssanyachetwani/Pneumonia-detection-and-classification-using-lung-radiographs/blob/main/rim/typical.png?raw=true" alt="datab" height=300/> 
 
-<img src="https://github.com/Ssanyachetwani/Pneumonia-detection-and-classification-using-lung-radiographs/blob/main/rim/indeterminate.png?raw=true" alt="datab" height=300/> 
+<img src="https://github.com/Ssanyachetwani/Pneumonia-detection-and-classification-using-lung-radiographs/blob/main/rim/ensemble.png?raw=true" alt="datab" height=300/>
 
-<img src="https://github.com/Ssanyachetwani/Pneumonia-detection-and-classification-using-lung-radiographs/blob/main/rim/atypical.png?raw=true" alt="datab" height=300/> 
 Ensembling methods:
 <li> OR method (Affirmative): A box is considered if it’s generated by at least one of the models </li>
 <li> AND method (Unanimous): A box is considered if all of the models generate the same box (the box is considered the same if IOU > 0.5) </li>
 <li> Consensus method: A box is considered if the majority of the models generate the same box (ie) if there are m models and (m/2 +1) models generate the same box, that box is considered as valid </li>
 <li> Weighted Fusion: This is a novel method which was created to replace NMS and it’s shortcomings </li>
 
-
-
-<img src="https://github.com/Ssanyachetwani/Pneumonia-detection-and-classification-using-lung-radiographs/blob/main/rim/ensemble.png?raw=true" alt="datab" height=300/> 
+<img src="https://github.com/Ssanyachetwani/Pneumonia-detection-and-classification-using-lung-radiographs/blob/main/rim/typical.png?raw=true" alt="datab" height=300/>      <img src="https://github.com/Ssanyachetwani/Pneumonia-detection-and-classification-using-lung-radiographs/blob/main/rim/indeterminate.png?raw=true" alt="datab" height=300/>      <img src="https://github.com/Ssanyachetwani/Pneumonia-detection-and-classification-using-lung-radiographs/blob/main/rim/atypical.png?raw=true" alt="datab" height=300/>
+ 
 
 ## Results :
+It is important to compare the results with different combinations in the pipeline, hence I compared results by applying **SUPERPIXEL + DEOLDIFY** along with only **SUPERPIXEL** and **DELODIFY** on three parameters : Precision, Recall and maP. The results have been tabulated below
 
 Superpixel + DeOldify
 | Class | Typical  | Indeterminate  | Atypical  |
