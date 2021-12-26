@@ -25,3 +25,36 @@ The hidden test dataset is of roughly the same scale as the training dataset.
 <li> sample_submission.csv - a sample submission file containing all image- and study-level IDs. </li>
 
 ## MY APPROACH : 
+
+### 1. Balancing Dataset :
+Plotting the data on a pie chart, it is seen that the data is unbalanced and since this is a object detection and classification task, the results are greatly affected by the distribution of data across classes.
+
+Initial distribution :
+<li> Typical Appearance          3007 </li>
+<li> Negative for Pneumonia      1736 </li>
+<li> Indeterminate Appearance    1108 </li>
+<li> Atypical Appearance          483 </li>
+<li> Name: target, dtype: int64 </li>
+
+<img src="https://github.com/Ssanyachetwani/Pneumonia-detection-and-classification-using-lung-radiographs/blob/main/rim/rim1.png?raw=true" alt="dataub" width=500/>
+
+Upon balancing this data set using Image Augmentation technique, the dataset becomes equally distributed across all 4 classes :
+<li> Typical Appearance          3007 </li>
+<li> Negative for Pneumonia      3472 </li>
+<li> Indeterminate Appearance    3314 </li>
+<li> Atypical Appearance         2415 </li>
+<li> Name: target, dtype: int64 </li>
+
+<img src="https://github.com/Ssanyachetwani/Pneumonia-detection-and-classification-using-lung-radiographs/blob/main/rim/rim2.png?raw=true" alt="datab" width=500/>
+
+### 2. Decolorizer :
+
+
+### 3. Superpixel Segmentation :
+
+
+### 4. YOLOv5 :
+### 5. Ensemble :
+
+## Results :
+
