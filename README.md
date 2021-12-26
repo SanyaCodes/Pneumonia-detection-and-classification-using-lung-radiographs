@@ -47,20 +47,25 @@ Upon balancing this data set using Image Augmentation technique, the dataset bec
 
 <img src="https://github.com/Ssanyachetwani/Pneumonia-detection-and-classification-using-lung-radiographs/blob/main/rim/rim2.png?raw=true" alt="datab" width=500/>
 
-### 2. Masking :
-When processing images, the term 'masking' refers to the practice of using a mask to protect a specific area of an image, just as we would use masking tape when painting the house. Masking an area of an image protects that area and deletes res
+### 2. Decolorizer :
 
-Here I used UNet :
+The main aim of this step is to convert the B&W radiographs to color. This step is helpful in detecting pneumonia since the areas of the lungs affected are highlighted. It can be visually seen that it is easier to detect pneumonia in the colored images.
+<img src="https://github.com/Ssanyachetwani/Pneumonia-detection-and-classification-using-lung-radiographs/blob/main/rim/original.png?raw=true" alt="datab" width=300/>              <img src="https://github.com/Ssanyachetwani/Pneumonia-detection-and-classification-using-lung-radiographs/blob/main/rim/deoldify.png?raw=true" alt="datab" width=300/>
+
+We make use of an open source library DeOldify to colorize the grayscale radiographs - https://github.com/jantic/DeOldify.
+
+### 3. Superpixel Segmentation :
+In an image the neighbouring pixels share similar characteristics, as a result there is a lot of redundant information which makes training difficult. A superpixel is a group of pixels that share common characteristics. 
+Superpixels have the following advantages:
+<li> Carry more information than pixels </li>
+<li> They provide a convenient and compact representation of images that can be very useful for computationally demanding problems </li>
+<li> Superpixels have a perceptual meaning since pixels belonging to a given superpixel share similar visual properties.</li>
 
 
-### 3. Decolorizer :
+<img src="https://github.com/Ssanyachetwani/Pneumonia-detection-and-classification-using-lung-radiographs/blob/main/rim/superpixel.png?raw=true" alt="datab" width=300/> 
 
-
-### 4. Superpixel Segmentation :
-
-
-### 5. YOLOv5 :
-### 6. Ensemble :
+### 4. YOLOv5 :
+### 5. Ensemble :
 
 ## Results :
 
