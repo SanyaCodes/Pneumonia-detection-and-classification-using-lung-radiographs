@@ -85,5 +85,8 @@ Ensembling methods:
 <li> Weighted Fusion: This is a novel method which was created to replace NMS and it’s shortcomings </li>
 
 
+
+<img src="https://github.com/Ssanyachetwani/Pneumonia-detection-and-classification-using-lung-radiographs/blob/main/rim/ensemble.png?raw=true" alt="datab" height=300/> 
+
 ## Results :
 
