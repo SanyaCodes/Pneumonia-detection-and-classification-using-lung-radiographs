@@ -82,7 +82,7 @@ Ensembling methods:
 <li> Consensus method: A box is considered if the majority of the models generate the same box (ie) if there are m models and (m/2 +1) models generate the same box, that box is considered as valid </li>
 <li> Weighted Fusion: This is a novel method which was created to replace NMS and it’s shortcomings </li>
 
-<img src="https://github.com/Ssanyachetwani/Pneumonia-detection-and-classification-using-lung-radiographs/blob/main/rim/typical.png?raw=true" alt="datab" height=300/>      <img src="https://github.com/Ssanyachetwani/Pneumonia-detection-and-classification-using-lung-radiographs/blob/main/rim/indeterminate.png?raw=true" alt="datab" height=300/>      <img src="https://github.com/Ssanyachetwani/Pneumonia-detection-and-classification-using-lung-radiographs/blob/main/rim/atypical.png?raw=true" alt="datab" height=300/>
+<img src="https://github.com/Ssanyachetwani/Pneumonia-detection-and-classification-using-lung-radiographs/blob/main/rim/typical.png?raw=true" alt="datab" height=250/>      <img src="https://github.com/Ssanyachetwani/Pneumonia-detection-and-classification-using-lung-radiographs/blob/main/rim/indeterminate.png?raw=true" alt="datab" height=250/>      <img src="https://github.com/Ssanyachetwani/Pneumonia-detection-and-classification-using-lung-radiographs/blob/main/rim/atypical.png?raw=true" alt="datab" height=250/>
  
 
 ## Results :
